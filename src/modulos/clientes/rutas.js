@@ -1,9 +1,14 @@
 const express = require('express');
 
+//importamos respuestas
+const respuesta  = require('../../red/respuestas.js');
+
+
 const router = express.Router();
 
+//hacemos peticion
 router.get('/',function (req,res) {
-    res.send('Clientes Ok')
+    respuesta.success(req,res,'Todo Ok', 200)
 });
 
-module.exports = router;
+module.exports = router; 
